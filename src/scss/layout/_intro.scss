@@ -1,0 +1,122 @@
+.intro {
+    position: relative;
+
+    overflow: hidden;
+    background: url("../img/dmitriy/desktop.png") no-repeat right 20% top -42%;
+    transition: ease-in-out 1s;
+
+    @include huge-1800 {
+        background-position: right 1% top -42%;
+    }
+
+    @include huge-1440 {
+        background-position: right -355px top -42%;
+    }
+
+    @include huge {
+        background: url("../img/dmitriy/tablet.png") no-repeat 300% 339%;
+    }
+
+    @include large-1050 {
+        background-position: 380% 340%;
+    }
+
+    @include large-1030 {
+        background-position: 450% 350%;
+    }
+
+    @include large {
+        @include flex(wrap, column, flex-start);
+
+        padding-top: 52px;
+        width: 100%;
+        background: url("../img/dmitriy/mobile.png") no-repeat 39% 47%;
+    }
+}
+
+.intro__image {
+    @include large {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.intro__user {
+    position: absolute;
+    transition: right 1s;
+
+    @include position-elem-bottom-right(-2%, 25%);
+
+    @include huge-1800 {
+        @include position-elem-bottom-right(-2%, 20%);
+    }
+
+    @include huge-1440 {
+        @include position-elem-bottom-right(-2%, 3%);
+    }
+
+    @include huge-1320 {
+        @include position-elem-bottom-right(-2%, 12%);
+    }
+
+    @include huge {
+        right: 4%;
+    }
+
+    @include large {
+        position: relative;
+    }
+}
+
+.intro__inner {
+    z-index: 5;
+    @include padding(210px, 0, 254px, 0);
+
+    @include huge {
+        @include padding(223px, 0, 249px, 0);
+    }
+
+    @include large {
+        @include padding(16px, 0, 40px, 0);
+
+        z-index: 3;
+        text-align: center;
+
+        background-color: $color-white;
+    }
+}
+
+.intro__title {
+    @include font(80px, 900);
+
+    @include margin(0, 0, 67px, 0);
+
+    line-height: 0.7;
+
+    width: 63%;
+
+    .intro__subtitle {
+        @include text_color-font;
+    }
+
+    @include huge {
+        @include margin(0, 0, 55px, 0);
+
+        font-size: 54px;
+        line-height: 55px;
+        letter-spacing: 0.1px;
+    }
+
+    @include large {
+        @include margin(0, 0, 37px, 0);
+
+        font-size: 30px;
+        line-height: 1;
+
+        width: 100%;
+
+        .intro__subtitle {
+            font-size: 16px;
+        }
+    }
+}

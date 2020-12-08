@@ -1,0 +1,323 @@
+.intro__elements {
+    @include list-reset;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    z-index: -1;
+}
+
+.gradient {
+    @include gradient-elements;
+}
+
+@mixin animation($name) {
+    animation-name: $name;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes element1 {
+    from {
+        opacity: 0;
+        top: 190px;
+        left: 90px;
+    }
+    to {
+        opacity: 1;
+        top: -150px;
+        left: -355px;
+    }
+}
+
+@keyframes element1h {
+    from {
+        opacity: 0;
+        top: 190px;
+        left: 90px;
+    }
+    to {
+        opacity: 1;
+        top: -152px;
+        left: -78px;
+    }
+}
+
+@keyframes element1l {
+    from {
+        opacity: 0;
+        top: -160px;
+        left: -15px;
+    }
+    to {
+        opacity: 1;
+        top: -160px;
+        left: -15px;
+    }
+}
+
+@keyframes element2 {
+    from {
+        opacity: 0;
+        top: 80px;
+        left: -10px;
+    }
+    to {
+        opacity: 1;
+        top: -35px;
+        left: -286px;
+    }
+}
+
+@keyframes element2h {
+    from {
+        opacity: 0;
+        top: 80px;
+        left: -10px;
+    }
+    to {
+        opacity: 1;
+        top: 246px;
+        left: -97px;
+    }
+}
+
+@keyframes element2l {
+    from {
+        opacity: 0;
+        top: -90px;
+        right: 30px;
+    }
+    to {
+        opacity: 1;
+        top: -90px;
+        right: 30px;
+    }
+}
+
+@keyframes element3 {
+    from {
+        opacity: 0;
+        top: -10px;
+        left: -10px;
+    }
+    to {
+        opacity: 1;
+        top: 182px;
+        left: -155px;
+    }
+}
+
+@keyframes element3h {
+    from {
+        opacity: 0;
+        top: -10px;
+        left: 30px;
+    }
+    to {
+        opacity: 1;
+        top: 114px;
+        left: 204px;
+    }
+}
+
+@keyframes element3l {
+    from {
+        opacity: 0;
+        top: -260px;
+        right: -115px;
+    }
+    to {
+        opacity: 1;
+        top: -260px;
+        right: -115px;
+    }
+}
+
+@keyframes element4 {
+    from {
+        opacity: 0;
+        top: 0;
+        left: 0;
+    }
+    to {
+        opacity: 1;
+        top: -383px;
+        left: 255px;
+    }
+}
+
+@keyframes element4h {
+    from {
+        opacity: 0;
+        top: 0;
+        right: 0;
+    }
+    to {
+        opacity: 1;
+        top: -383px;
+        right: -730px;
+    }
+}
+
+@keyframes element5 {
+    from {
+        opacity: 0;
+        top: -80px;
+        right: 50px;
+    }
+
+    to {
+        opacity: 2;
+        top: -53px;
+        right: -420px;
+    }
+}
+
+@keyframes element5h {
+    from {
+        opacity: 0;
+        top: -80px;
+        right: 50px;
+    }
+
+    to {
+        opacity: 2;
+        top: -23px;
+        right: -670px;
+    }
+}
+
+@keyframes element6h {
+    from {
+        opacity: 0;
+        top: -80px;
+        right: 50px;
+    }
+
+    to {
+        opacity: 1;
+        top: -400px;
+        right: -220px;
+    }
+}
+
+.element1 {
+    position: relative;
+    @include font(60px, 900);
+    @include animation(element1);
+    transform: rotate(40deg);
+
+    @include huge {
+        font-size: 50px;
+        @include animation(element1h);
+
+        transform: rotate(29deg);
+    }
+
+    @include large {
+        opacity: 1;
+        font-size: 24px;
+        @include animation(element1l);
+    }
+}
+
+.element2 {
+    @include font(58px, 900);
+    @include animation(element2);
+
+    position: relative;
+
+    z-index: -1;
+
+    transform: rotate(18deg);
+
+    @include huge {
+        @include animation(element2h);
+        //@include position-elem-top-left(77.7%, 5.7%);
+    }
+
+    @include large {
+        font-size: 28px;
+        @include animation(element2l);
+        //@include position-elem-top-left(-55px, -25px);
+    }
+}
+
+.element3 {
+    opacity: 0;
+
+    @include font(42px, 900);
+
+    @include animation(element3);
+    position: relative;
+
+    transform: rotate(-20deg);
+
+    @include huge {
+        @include animation(element3h);
+    }
+
+    @include large {
+        font-size: 18px;
+        //animation: none;
+        @include animation(element3l);
+        // @include position-elem-top-right(-86px, 10px);
+
+        transform: rotate(-29deg);
+    }
+}
+
+.element4 {
+    @include font(30px, 900);
+    @include animation(element4);
+    position: relative;
+    transform: rotate(-15deg);
+
+    @include huge {
+        @include animation(element4h);
+        transform: rotate(-13deg);
+    }
+
+    @include large {
+        display: none;
+    }
+}
+
+.element5 {
+    @include font(36px, 900);
+    @include animation(element5);
+    position: relative;
+    transform: rotate(20deg);
+
+    @include huge {
+        z-index: 3;
+        @include animation(element5h);
+    }
+
+    @include large {
+        opacity: 1;
+        font-size: 15px;
+        animation: none;
+        transition: none;
+        z-index: 1;
+
+        @include position-elem-bottom-right(200px, -200px);
+    }
+}
+
+.element6 {
+    display: none;
+
+    @include huge {
+        @include font(48px, 700);
+        @include animation(element6h);
+        position: relative;
+        display: block;
+
+        transform: rotate(15deg);
+    }
+
+    @include large {
+        display: none;
+    }
+}

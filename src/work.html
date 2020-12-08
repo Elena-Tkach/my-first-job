@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preload" href="fonts/roboto-regular.woff2" as="font">
+    <link rel="preload" href="fonts/roboto-black.woff2" as="font">
+    <link rel="preload" href="fonts/roboto-bold.woff2" as="font">
+    <link rel="preload" href="fonts/roboto-regular.woff2" as="font">
+
+    <link rel="stylesheet" type="text/css" href="style.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <title>Frontend-разработчик. Веб-версталщик</title>
+
+    <script src="script.min.js" defer></script>
+</head>
+
+<body class="body">
+    <div class="progress js-progress"></div>
+    @@include("html/_header-page.html")
+    <main class="main">
+        <div class="project container">
+            <svg class="project__svg">
+                <use xlink:href="img/sprite.svg#gear"></use>
+            </svg>
+            <h1 class="project__title">Сайт в работе.</h1>
+            <p class="project__subtitle"> Скоро будет!</p>
+            <button class="button button--orange button--project js-btn js_btn-email" aria-label="Заказать проект"
+                type="button" data-path="email">Заказать проект</button>
+        </div>
+    </main>
+    @@include("html/_footer-page.html")
+    @@include("html/_modal.html")
+</body>
+
+</html>

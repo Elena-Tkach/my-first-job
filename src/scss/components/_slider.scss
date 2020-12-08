@@ -1,0 +1,137 @@
+.slider {
+    text-align: center;
+   
+}
+
+.slider__list {
+    @include list-reset;
+
+    @include huge {
+        margin-bottom: 100px;
+    }
+
+    @include large {
+        margin-bottom: 0;
+    }
+}
+
+.slide {
+    margin: 0;
+    position: relative;
+    padding-bottom: 20px;
+
+    &:hover {
+        box-shadow: $box-shasow;
+    }
+
+    @include huge {
+        width: 100%;
+    }
+
+    @include large {
+        padding-bottom: 8px;
+    }
+
+    &__img {
+        object-fit: cover;
+        margin-top: 10px;
+    }
+
+    &__title {
+        font-size: $fs_20;
+
+        margin: 0;
+        margin-top: 25px;
+        margin-bottom: 15px;
+
+        color: $color-text;
+
+        @include huge {
+            font-size: 24px;
+
+            margin-top: 32px;
+
+            text-align: center;
+        }
+
+        @include large {
+            font-size: 18px;
+            margin-top: 26px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.portfolio-dots {
+    display: none;
+
+    @include huge {
+        display: block;
+    }
+}
+/*Arrows*/
+.slider-btn-list {
+    @include list-reset;
+
+    .slider-btn {
+        &--left,
+        &--right {
+            position: absolute;
+            z-index: 20;
+            top: 45%;
+
+            width: 60px;
+            height: 60px;
+
+            cursor: $cursor-pointer;
+
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 0 10px 2px #f3f3f3;
+        }
+
+        &--left {
+            left: -2.4%;
+
+            background: url("../img//element/arrow-left.png") no-repeat;
+
+            &:focus,
+            &:hover {
+                @include slider-btn-color;
+                outline: none;
+            }
+
+            @include huge-1246 {
+                left: -1.5%;
+            }
+
+            @include huge-1220 {
+                left: -1%;
+            }
+        }
+
+        &--right {
+            right: -2.65%;
+
+            background: url("../img/element/arrow-right.png") no-repeat;
+
+            &:focus,
+            &:hover {
+                @include slider-btn-color;
+                outline: none;
+            }
+
+            @include huge-1246 {
+                right: -1.5%;
+            }
+
+            @include huge-1220 {
+                right: -1%;
+            }
+        }
+    }
+
+    @include huge {
+        display: none;
+    }
+}

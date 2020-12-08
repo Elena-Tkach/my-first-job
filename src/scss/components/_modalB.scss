@@ -1,0 +1,95 @@
+.modals {
+    &__inner {
+        top: 0;
+        left: 0;
+        position: fixed;
+
+        z-index: 32;
+        height: 100%;
+        width: 100%;
+
+        visibility: hidden;
+        opacity: 0;
+        overflow: auto;
+
+        display: flex;
+        align-items: center;
+
+        &--color {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+}
+
+.btn-close {
+    z-index: 50;
+    position: absolute;
+
+    top: calc(50% - 264px);
+    left: calc(50% + 222px);
+    transform: translate(-50%, -50%);
+
+    width: 42px;
+    height: 42px;
+
+    background-color: rgba(0, 0, 0, 0.301);
+    border-radius: 100%;
+    border: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+
+        background-color: $color-orange;
+        border-radius: 100%;
+    }
+
+    &__svg {
+        width: 22px;
+        height: 22px;
+
+        margin-top: 6px;
+        z-index: 32;
+        fill: $color-white;
+
+        @include large {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    @include large {
+        top: calc(50% - 168px);
+        left: calc(50% + 116px);
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.modals__inner--visible {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+}
+
+.modal {
+    margin: auto;
+    width: 400px;
+    min-height: 480px;
+
+    display: none;
+
+    &--color {
+        background-color: $color-white;
+    }
+
+    @include large {
+        width: 280px;
+        min-height: 380px;
+    }
+}
+
+.modal--visible {
+    display: block;
+}

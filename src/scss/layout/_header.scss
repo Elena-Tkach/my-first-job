@@ -1,0 +1,89 @@
+.header {
+    background-color: $color-blok;
+}
+
+.header__site {
+    @include flex(wrap, row, space-between);
+    align-items: center;
+    padding-top: 27px;
+    padding-bottom: 20px;
+
+    .header__contacts {
+        @include flex(wrap, row, space-between);
+        align-items: center;
+        width: 39%;
+
+        @include huge {
+            width: 49%;
+        }
+
+        @include large {
+            width: 78%;
+        }
+    }
+}
+
+.header__menu {
+    width: 50%;
+    @include flex(wrap, row, space-between);
+
+    .contacts {
+        display: none;
+    }
+
+    @include huge {
+        .contacts {
+            display: block;
+
+            .contacts-link--burger {
+                display: none;
+
+                @include large {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @include large {
+        width: 10%;
+    }
+}
+
+.header__btn-burger {
+    display: none;
+
+    @include huge {
+        z-index: 30;
+        display: block;
+        width: 49px;
+        height: 49px;
+        transition: 0.4s;
+
+        @include bottom-style-hover;
+        border: 1px solid transparent;
+        transition: 0.5s;
+
+        background: url("../img/mob-navigation/burger.svg") no-repeat 50% center;
+    }
+
+    @include large {
+        width: 28px;
+        height: 28px;
+        background: url("../img/mob-navigation/mob-burger.svg") no-repeat 50%;
+    }
+}
+
+.active .header__btn-burger {
+    top: 28px;
+
+    position: fixed;
+    transition: 0.5s;
+    transform: translateX(-40px);
+    background: url("../img/mob-navigation/close.svg") no-repeat 50% center;
+
+    @include large {
+        transform: none;
+        position: absolute;
+    }
+}

@@ -1,0 +1,24 @@
+$color-white: #fff;
+$color-blok: #fbfbfb;
+$color-text: #8993ad;
+$color-black: #000;
+$color-orange: #ff4e2e;
+$color-orange05: #ff4d2e83;
+$color-pink: #e52e71;
+
+$gradient: linear-gradient(35deg, #ff8f5a, #e52e71);
+$button-gradient: linear-gradient(to right, $color-text, #e52e71);
+$gradient-button: linear-gradient(to right, #8993ad, #e52e71);
+$linear-gradent: linear-gradient(to right, #ecbb18, #e52e71);
+
+$box-shasow: 0 0 15px 0 #ffffff80;
+
+$fs_25: 25px;
+$fs_20: 20px;
+$fw_bold: 700;
+$fw_normal: 400;
+
+$cursor-pointer: pointer;
+$transition: 0.5s;
+$border-transparent: 1px solid transparent;
+$outline-active: 1px solid $color-orange;

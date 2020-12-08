@@ -1,0 +1,48 @@
+.portfolio__inner {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    @include padding(37px, 0, 101px, 0);
+
+    text-align: center;
+
+    @include huge {
+        @include padding(37px, 0, 100px, 0);
+    }
+
+    @include large {
+        @include padding(44.5px, 0, 0, 0);
+    }
+}
+
+.portfolio__button {
+    @include large {
+        margin: 12px 0 51px;
+    }
+}
+
+.portfolio__title {
+    @include section-title;
+    margin-bottom: 80px;
+
+    @include huge {
+        margin-bottom: 88px;
+    }
+
+    @include large {
+        margin-bottom: 45px;
+    }
+}
+
+.portfolio__slider {
+    margin-bottom: 57px;
+
+    @include huge {
+        margin-bottom: 84px;
+    }
+
+    @include large {
+        margin-bottom: 23px;
+    }
+}

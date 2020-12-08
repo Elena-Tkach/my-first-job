@@ -1,0 +1,191 @@
+.menu-nav--medium {
+    width: 50%;
+
+    @include huge {
+        position: fixed;
+        z-index: 10;
+
+        width: 30%;
+
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        padding-top: 120px;
+
+        background: $color-blok;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: all 2s;
+    }
+
+    @include large {
+        position: absolute;
+        min-height: 475px;
+        bottom: 50%;
+    }
+
+    .menu-nav__list {
+        // margin-bottom: 20px;
+
+        @include huge {
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+
+        @include large {
+            width: 250px;
+        }
+
+        &--row {
+            @include flex(wrap, row, flex-start);
+            align-items: center;
+        }
+    }
+
+    .menu-nav__item {
+        margin-right: 10%;
+
+        &:last-child {
+            margin-right: 0;
+        }
+        .menu-nav__svg {
+            display: none;
+        }
+
+        @include huge {
+            display: flex;
+
+            align-items: center;
+            font-size: 24px;
+            color: #1f1f24;
+            margin-bottom: 10px;
+
+            margin-right: 0;
+            border: 2px solid transparent;
+            @include burger-style;
+
+            .menu-nav__svg {
+                display: block;
+                cursor: pointer;
+                fill: $color-orange;
+                margin-right: 20px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .nav-link {
+        @include huge {
+            line-height: 50px;
+
+            &:hover {
+                border-bottom: none;
+            }
+        }
+
+        @include large {
+            margin-left: 20px;
+        }
+    }
+}
+
+.active .menu-nav--medium {
+    @include huge {
+        // display: block;
+
+        opacity: 1;
+        visibility: visible;
+
+        left: 0;
+        box-shadow: $box-shasow;
+        transition: left 0.5s;
+    }
+
+    @include large {
+        position: absolute;
+        width: 100%;
+    }
+}
+
+// меню в footer
+.menu-nav--width {
+    @include huge {
+        width: 20%;
+        margin-bottom: 38px;
+    }
+
+    @include large {
+        width: 100%;
+        margin-bottom: 22px;
+    }
+
+    .menu-nav__list--column {
+        @include flex(wrap, column, flex-start);
+    }
+
+    .menu-nav__item {
+        margin-right: 5.5%;
+
+        .menu-nav__item:last-child {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+
+        &--color {
+            color: $color-text;
+        }
+
+        &--margin {
+            margin-bottom: 6px;
+
+            @include huge {
+                margin-bottom: 9px;
+            }
+        }
+    }
+}
+
+.menu-nav__list {
+    @include list-reset;
+}
+
+.menu-nav__link {
+    @include hover-link;
+    @include focus-link;
+
+    &--font {
+        font-size: 18px;
+    }
+}
+
+.overlay {
+    @include huge {
+        position: fixed;
+        z-index: 5;
+
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        background-color: $color-black;
+
+        transition: all 0.5s;
+
+        opacity: 0;
+        pointer-events: none;
+
+        &.active {
+            opacity: 0.25;
+            pointer-events: all;
+            transition: all 0.5s;
+
+            @include large {
+                opacity: 0;
+            }
+        }
+    }
+}

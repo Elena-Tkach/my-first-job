@@ -1,0 +1,99 @@
+.button {
+    cursor: $cursor-pointer;
+    &:hover,
+    &:focus {
+        color: $color-white;
+        outline: 1px solid $color-orange;
+        border: 1px solid $color-blok;
+        background: $gradient-button;
+        transition: all 0.3s;
+    }
+}
+
+.button--white {
+    color: $color-orange;
+
+    border: 1px solid #f82370;
+    background-color: transparent;
+}
+
+.button--size {
+    padding: 12.7px 39.3px;
+
+    @include large {
+        font-size: 4px;
+        padding: 13px 0;
+        cursor: $cursor-pointer;
+        color: transparent;
+        border: $border-transparent;
+        background: url("../img/contacts/phone.png") no-repeat center;
+
+        &:focus,
+        &:hover,
+        &:active {
+            color: transparent;
+            background: url("../img/contacts/phone-act.png") no-repeat center center;
+        }
+    }
+}
+
+.button--padding {
+    padding: 10px 60px;
+
+    @include large {
+        width: 100%;
+        padding: 14px 60px;
+
+        color: $color-white;
+
+        background-color: $color-orange;
+    }
+}
+
+.button--orange {
+    font-size: 18px;
+    color: $color-white;
+
+    border: $border-transparent;
+    background-color: $color-orange;
+
+    @include huge {
+        font-size: 16px;
+    }
+}
+
+.button--more {
+    padding: 19.7px 71px;
+
+    @include huge {
+        padding: 23px 103px;
+    }
+
+    @include large {
+        padding: 17px 82px;
+    }
+}
+
+.button--price {
+    padding: 18px 58px;
+
+    @include huge {
+        padding: 24px 90px;
+    }
+
+    @include large {
+        padding: 17px 71px;
+    }
+}
+
+.button--project {
+    padding: 16px 64px;
+
+    @include huge {
+        padding: 22px 96px;
+    }
+
+    @include large {
+        padding: 14.7px 76.2px;
+    }
+}

@@ -1,0 +1,61 @@
+.price__elements {
+    @include list-reset;
+    @include large {
+        display: none;
+    }
+}
+
+.elem {
+    color: #fff;
+}
+
+.element__1 {
+    // display: none;
+    @include font(50px, 400);
+    @include position-elem-top-left(12%, 8%);
+    transform: rotate(28deg);
+
+    @include huge {
+        @include font(34px, 400);
+        @include position-elem-top-left(4.2%, 24%);
+    }
+}
+
+.element__2 {
+    @include font(58px, 900);
+    @include position-elem-bottom-left(10%, 14%);
+
+    transform: rotate(20deg);
+
+    @include huge {
+        display: none;
+    }
+}
+
+.element__3 {
+    @include font(38px, 700);
+    @include position-elem-top-right(20%, 12%);
+
+    transform: rotate(-22deg);
+
+    @include huge {
+        @include position-elem-top-right(77.4%, 9.4%);
+    }
+}
+
+.element__4 {
+    @include font(38px, 700);
+    @include position-elem-bottom-right(5%, 22%);
+
+    transform: rotate(22deg);
+
+    @include huge {
+        @include font(24px, 700);
+        @include position-elem-bottom-right(44.4%, 3%);
+    }
+
+    @include large-1050 {
+        @include position-elem-bottom-right(40.4%, 1%);
+        transition: $transition;
+    }
+}

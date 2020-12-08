@@ -1,0 +1,69 @@
+<div class="modals modal--color">
+    <div class="modals__inner modals__inner--color modal__inner--position js-modals" role="dialog" aria-modal="true">
+        <button class="modals__btn-close btn-close js_btn-close" aria-label="Закрыть окно" type="button">
+            <svg class="btn-close__svg">
+                <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+        </button>
+
+        <div class="modal modal--color modal--phone js-modal" data-target="phone">
+            <form class="modal__form-phone form js-form__phone" action="mail.php" enctype="multipart/form-data"
+                method="POST">
+                <input type="hidden" name="admin_email[]" value="tcachelena@gmail.com">
+                <input type="hidden" name="form_subject" value="Заявка с сайта">
+
+                <fieldset class="form__group ">
+                    <legend class="form__title  form__title--font">Заказать обратный звонок</legend>
+                    <span class="form__subtitle form__subtitle--color form__subtitle--font">
+                        Отправьте номер телефона и я перезвоню Вам!
+                    </span>
+
+                    <input class="form__input form__name form__input--margin form__input--width form__input--style"
+                        type="text" name="Name" placeholder="Имя" required>
+
+                    <input class="form__input  form__input--margin form__input--width form__input--style" type="tel"
+                        data-validate-field="tel" name="Tel" placeholder="Номер телефона*" required>
+                </fieldset>
+                <button class="form__button form__button--size button" type="submit">Отправить</button>
+
+                <div class="placeholder">
+                    <small>* поле обязательно для заполнения</small>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal modal--color modal--email js-modal " data-target="email">
+            <form class="modal__form--email form js-form_mail" action="mail.php" enctype="multipart/form-data"
+                method="POST">
+                <input type="hidden" name="admin_email[]" value="tcachelena@gmail.com">
+                <input type="hidden" name="form_subject" value="Заявка с сайта">
+
+                <fieldset class="form__group">
+                    <legend class="form__title  form__title--font">Заказать проект</legend>
+                    <span class="form__subtitle form__subtitle--color form__subtitle--font">
+                        Отправьте email и я свяжусь с вами в ближашее время!
+                    </span>
+
+                    <input class="form__input form__input--margin form__input--width form__input--style" type="text"
+                        name="Name" placeholder="Имя" required>
+
+                    <input class="form__input  form__input--margin form__input--width form__input--style" type="email"
+                        data-validate-field="email" name="Email" placeholder="Email*" required>
+
+                </fieldset>
+                <button class="form__button form__button--size button" type="submit">Отправить</button>
+
+                <div class="placeholder">
+                    <small>* поле обязательно для заполнения</small>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="popup popup--color popup--hidden js-popup">
+            <span class="popup__head">Ура!</span>
+            <h3 class="popup__title"> Ваши данные успешно отправлены!</h3>
+            <p class="popup__subtitle">В течении часа я свяжусь с Вами! </p>
+        </div>
+    </div>
+</div>

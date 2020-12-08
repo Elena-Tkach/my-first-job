@@ -1,0 +1,59 @@
+html {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: #000;
+    background-color: #fbfbfb;
+
+    display: flex;
+    flex-direction: column;
+
+    &.no-scroll {
+        overflow-y: hidden;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include huge {
+        max-width: 1024px;
+        padding: 0 40px;
+    }
+
+    @include large {
+        max-width: 320px;
+        padding: 0 20px;
+    }
+}
+
+.main {
+    flex: 1 0 auto;
+}

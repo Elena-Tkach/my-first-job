@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preload" href="fonts/roboto-regular.woff2" as="font">
+    <link rel="preload" href="fonts/roboto-black.woff2" as="font">
+    <link rel="preload" href="fonts/roboto-bold.woff2" as="font">
+    <link rel="preload" href="fonts/roboto-regular.woff2" as="font">
+
+    <link rel="stylesheet" type="text/css" href="style.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="frontend-разработчик, версталщик, сайт, лэндос">
+    <meta name="description" content="Разработка сайтов любой сложности">
+    <title>Frontend-разработчик. Веб-версталщик</title>
+
+    <script src="script.min.js" defer></script>
+</head>
+
+<body class="body">
+    <div class="progress js-progress"></div>
+
+    @@include("html/_header.html")
+
+    <main class="main">
+        @@include("html/_intro.html")
+        @@include("html/_services.html")
+        @@include("html/_portfolio.html")
+        @@include("html/_price.html")
+    </main>
+    @@include("html/_footer.html")
+    @@include("html/_modal.html")
+    <div class="overlay js-overlay"></div>
+</body>
+
+</html>

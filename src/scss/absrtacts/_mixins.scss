@@ -1,0 +1,229 @@
+@mixin list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin visually-hidden {
+    position: absolute !important;
+
+    clip: rect(1px, 1px, 1px, 1px); /* IE6, IE7*/
+    clip: rect(1px, 1px, 1px, 1px);
+
+    width: 1px !important;
+    height: 1px !important;
+    margin: 0;
+    padding: 0 !important;
+
+    border: 0 !important;
+}
+
+// Flex
+@mixin flex($wrap, $direction, $content) {
+    display: flex;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    justify-content: $content;
+}
+
+// Text
+@mixin section-title {
+    font-size: 54px;
+    font-weight: 700;
+
+    @include large {
+        margin: 0;
+        font-size: 30px;
+        line-height: 1.1;
+    }
+}
+
+@mixin text_color-font {
+    font-size: 25px;
+    font-weight: 400;
+
+    color: $color-text;
+}
+
+@mixin font($size, $weight) {
+    font: {
+        size: $size;
+        weight: $weight;
+    }
+}
+
+@mixin position-elem-top-left($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin position-elem-top-right($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+@mixin position-elem-bottom-left($bottom, $left) {
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin position-elem-bottom-right($bottom, $right) {
+    position: absolute;
+    bottom: $bottom;
+    right: $right;
+}
+
+//size
+@mixin padding($top, $right, $bottom, $left) {
+    padding: {
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+    }
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+    margin: {
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+    }
+}
+
+@mixin gradient-elements {
+    color: #ec1280;
+    background: linear-gradient(1deg, rgb(243, 92, 44) 25%, rgb(250, 15, 140) 46%);
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin title-gradient {
+    color: rgb(0, 0, 0);
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// Hover
+@mixin hover-link {
+    &:hover {
+        color: $color-pink;
+        border-bottom: 1px solid $color-pink;
+    }
+}
+
+@mixin focus-link {
+    &:focus,
+    &:active {
+        color: $color-pink;
+        outline: $outline-active;
+    }
+}
+
+@mixin burger-style {
+    &:hover {
+        width: 100%;
+        border-image-slice: 1;
+        background: linear-gradient(to right, #f76927 5%, rgb(245, 3, 144) 95%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-left: 20px;
+        transition: padding-left 0.3s;
+
+        @include large {
+            padding-left: 0;
+            transition: padding-left none;
+        }
+    }
+}
+
+@mixin bottom-style-hover {
+    &:hover,
+    &:focus,
+    &:active {
+        cursor: pointer;
+        transition: 0.5s;
+        outline: 1px solid $color-orange;
+    }
+}
+
+@mixin svg {
+    overflow: visible;
+    transition: 0.1s;
+
+    &:focus,
+    &:hover,
+    &:active {
+        fill: $color-orange;
+        transition: 0.1s;
+    }
+}
+
+@mixin slider-btn-color {
+    color: #fff;
+    box-shadow: 0 0 10px 4px #8a94ae;
+}
+
+@mixin background-style {
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+@mixin huge-1800 {
+    @media (max-width: 1800px) {
+        @content;
+    }
+}
+
+@mixin huge-1440 {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
+@mixin huge-1320 {
+    @media (max-width: 1320px) {
+        @content;
+    }
+}
+
+@mixin huge-1246 {
+    @media (max-width: 1246px) {
+        @content;
+    }
+}
+
+@mixin huge-1220 {
+    @media (max-width: 1220px) {
+        @content;
+    }
+}
+
+@mixin huge {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin large-1050 {
+    @media (max-width: 1050px) {
+        @content;
+    }
+}
+
+@mixin large-1030 {
+    @media (max-width: 1030px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}

@@ -1,0 +1,97 @@
+.form {
+    padding: 18% 5% 10%;
+    text-align: center;
+
+    @include large {
+        padding: 18% 5% 2%;
+    }
+
+    &__group {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-bottom: 3%;
+    }
+
+    &__title {
+        &--font {
+            @include title-gradient;
+            @include font(26px, 400);
+
+            @include large {
+                @include font(18px, 400);
+            }
+        }
+
+        @include large {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 10%;
+
+        &--color {
+            color: $color-text;
+        }
+
+        &--font {
+            @include font(18px, 400);
+            @include large {
+                display: none;
+            }
+        }
+    }
+}
+
+.form__input {
+    &--width {
+        width: 280px;
+        height: 50px;
+
+        @include large {
+            width: 240px;
+            height: 50px;
+        }
+    }
+
+    &--margin {
+        margin-bottom: 25px;
+    }
+
+    &--style {
+        border: 1px solid $color-text;
+
+        padding: 10px;
+        @include font(18px, 200);
+
+        &:hover,
+        &:focus,
+        &:active {
+            outline: 2px solid $color-orange;
+            border: none;
+        }
+    }
+}
+
+.form__button {
+    border: 1px solid $color-pink;
+    background-color: $color-orange;
+    color: $color-white;
+    margin-bottom: 20px;
+    &--size {
+        padding: 4% 28%;
+    }
+
+    @include large {
+        &--size {
+            padding: 4% 32%;
+        }
+    }
+}
+
+.placeholder {
+    color: $color-text;
+}

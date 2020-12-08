@@ -1,0 +1,40 @@
+
+.project {
+    height: 500px;
+    padding: 80px 0 100px;
+    text-align: center;
+
+    &__svg {
+        fill: #b2b9ca;
+        width: 150px;
+        height: 150px;
+
+        left: -25px;
+        top: 0px;
+        animation-name: crcA1;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes crcA1 {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    &__title {
+        font-size: $fs_25;
+        font-weight: $fw_bold;
+
+        margin: 50px 0 20px;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        margin-bottom: 100px;
+    }
+}

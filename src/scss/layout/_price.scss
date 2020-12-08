@@ -1,0 +1,56 @@
+.price {
+    position: relative;
+
+    overflow: hidden;
+
+    background: $gradient;
+
+    .visually-hidden {
+        @include visually-hidden;
+    }
+}
+
+.price__article {
+    text-align: left;
+
+    color: #fff;
+
+    @include padding(75px, 90px, 56px, 115px);
+
+    @include huge {
+        @include padding(75px, 0, 56px, 0);
+    }
+
+    @include large {
+        @include padding(42px, 0, 30px, 0);
+    }
+}
+
+.price__text {
+    line-height: 60px;
+
+    @include font(45px, 700);
+
+    @include margin(0, 0, 28px, 0);
+    @include large {
+        font-size: 28px;
+        line-height: 1.4;
+
+        @include margin(0, 0, 34px, 0);
+    }
+}
+
+.price__note {
+    font-size: 23px;
+    line-height: 30px;
+
+    max-width: 80%;
+
+    @include large {
+        max-width: 96%;
+        font-size: 19px;
+        line-height: 27px;
+
+        padding: 0 5px;
+    }
+}
